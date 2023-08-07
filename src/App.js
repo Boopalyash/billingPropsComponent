@@ -41,21 +41,23 @@ const App = () => {
       </Box>
 
       {/* Add Button */}
-      <Box mt={2} mb={2} display="flex" justifyContent="center">
-        <Button
-          variant="contained"
-          color="primary"
-          onClick={() => setShowForm(true)}
-        >
-          Add
-        </Button>
-      </Box>
+      {!showForm && (
+        <Box mt={2} mb={2} display="flex" justifyContent="center">
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={() => setShowForm(true)}
+          >
+            Add
+          </Button>
+        </Box>
+      )}
 
       {/* Form Component */}
       {showForm && <FormComponent addUserData={addUserData} />}
 
       {/* Table Component */}
-      <TableComponent consoleOutput={consoleOutput} />
+      {!showForm && <TableComponent consoleOutput={consoleOutput} />}
     </Container>
   );
 };

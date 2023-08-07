@@ -162,12 +162,6 @@ const FormComponent = ({ addUserData }) => {
 
   return (
     <Container>
-      {/* <Box mt={4}>
-        <Typography variant="h4" align="center">
-          Personal Details
-        </Typography>
-      </Box> */}
-
       <form onSubmit={handleSubmit}>
         <Grid container spacing={2}>
           <Grid item xs={12} md={6}>
